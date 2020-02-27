@@ -1,0 +1,835 @@
+{
+	"info": {
+		"_postman_id": "a2a9dd35-f36d-49c7-a066-a2b488807d92",
+		"name": "swamp-entities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Virtual Entities",
+			"item": [
+				{
+					"name": "weather_station",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{  \r\n    \"id\": \"urn:ngsi-ld:WeatherStation:001\",  \r\n    \"type\": \"WeatherStation\", \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\",  \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n   \"source\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Weather service X\"  \r\n    },      \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Local Weather Station\"  \r\n    },  \r\n    \"weatherType\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Sunny Day\"  \r\n    },  \r\n    \"dewPoint\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"22.4\"  \r\n    },  \r\n    \"visibility\": {   \r\n        \"type\": \"Text\",  \r\n        \"value\": \"VeryPoor\"  \r\n    },  \r\n    \"temperature\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"26.4\"  \r\n    },  \r\n    \"relativeHumidity\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"22.4\"  \r\n    },  \r\n    \"precipitation\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"80\"  \r\n    },    \r\n    \"windDirection\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"240\"  \r\n    },  \r\n    \"windSpeed\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"2.4\"  \r\n    },  \r\n    \"atmosphericPressure\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"300\"  \r\n    }, \r\n    \"solarRadiation\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"20\"  \r\n    },  \r\n    \"illuminance\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"1200\"  \r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\" \r\n    },  \r\n    \"refWaterEstimate\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterEstimate:001\" \r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Flow Meter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterFlowMeter:001\",  \r\n    \"type\": \"WaterFlowMeter\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\",  \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Flow Rate Valve\"  \r\n    },  \r\n    \"waterMeter1\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"10\"  \r\n    },  \r\n    \"waterMeter2\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"12\"  \r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"\r\n    },  \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"\r\n    },\r\n    \"refIrrigationSystem\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"  \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VE - Probe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:SoilProbe:001\",  \r\n    \"type\": \"SoilProbe\",    \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"3 depth soil probe\"  \r\n    },  \r\n    \"location\": {  \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Point\",\r\n            \"coordinates\": [  \r\n                13.3986,  \r\n                52.5547  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"firmware\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"release 0.0.1\"  \r\n    },  \r\n    \"manufacturer\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Embrapa\"  \r\n    },   \r\n    \"numberOfSensors\":{ \r\n        \"type\":\"Number\",  \r\n        \"value\":\"5\"  \r\n    },  \r\n    \"soilMoistureRawDepth1\": { \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilMoistureRawDepth2\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilMoistureRawDepth3\": {       \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilMoistureCalibratedDepth1\": { \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilMoistureCalibratedDepth2\": {\r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilMoistureCalibratedDepth3\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilTemperatureDepth1\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilTemperatureDepth2\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilTemperatureDepth3\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilConductivityDepth1\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilConductivityDepth2\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"soilConductivityDepth3\": {  \r\n        \"type\": \"number\",  \r\n        \"value\": \"1.5\"  \r\n    },  \r\n    \"refManagementZone\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"  \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Level Meter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterLevelMeter:001\",  \r\n    \"type\": \"WaterLevelMeter\",  \r\n    \"location\": {  \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\",  \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Level meter Valve\"  \r\n    },  \r\n    \"waterLevel\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"32\"  \r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"\r\n    },  \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"\r\n    },\r\n    \"refIrrigationSystem\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"  \r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Central Pivot",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:CentralPivot:001\",  \r\n    \"type\": \"CentralPivot\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Polygon\",  \r\n             \"coordinates\":  [  \r\n                [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Central Pivot 1\"  \r\n    },  \r\n    \"angle\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"128\"  \r\n    },  \r\n    \"angularVelocity\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"128\" \r\n    },  \r\n    \"state\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"1\" \r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"\r\n    },  \r\n    \"refFarmer\": {\r\n   \"type\": \"Relationship\",  \r\n         \"value\": \"urn:ngsi-ld:Farmer:001\"\r\n    },\r\n    \"refIrrigationSystem\": {  \r\n    \"type\": \"Relationship\",  \r\n    \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Pump",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterPump:001\",  \r\n    \"type\": \"WaterPump\",\r\n    \"location\": {  \r\n        \"type\": \"geo:json\", \r\n        \"value\": {  \r\n             \"type\": \"Point\",  \r\n             \"coordinates\": [13.3986, 52.5547]   \r\n        }  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Entrance Pump\"  \r\n    },  \r\n    \"state\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0\"  \r\n    },  \r\n    \"pressure\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"320\"  \r\n    },  \r\n    \"flowRate\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"4.5\"  \r\n    },  \r\n    \"powerConsumption\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"400\"  \r\n    },  \r\n    \"refIrrigationSystem\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"  \r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"  \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Valve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Valve:001\",  \r\n    \"type\": \"Valve\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\",\r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": {\r\n        \"type\": \"Text\",  \r\n        \"value\": \"Flow Rate Valve\"  \r\n    },  \r\n    \"state\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0\"  \r\n    },  \r\n    \"flowRate\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"4.4\"  \r\n    },  \r\n    \"pressure\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"10\"  \r\n    },  \r\n    \"refIrrigationSystem\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"  \r\n    },  \r\n    \"refFarm\": {\r\n         \"type\": \"Relationship\",  \r\n         \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": {\r\n         \"type\": \"Relationship\", \r\n         \"value\": \"urn:ngsi-ld:Farmer:001\"  \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soler Energy System",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:SolarEnergySystem:001\",  \r\n    \"type\": \"SolarEnergySystem\",  \r\n    \"location\": {\r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\", \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Solar Energy System probe1\"  \r\n    },  \r\n    \"solarPower\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"150\"  \r\n    },  \r\n    \"solarVoltage\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"13.2\"  \r\n    },  \r\n    \"batteryCurrent\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"13.1\" \r\n    },  \r\n    \"loadCurrent\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"2.6\" \r\n    },  \r\n    \"batteryVoltage\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"4500\" \r\n    },  \r\n    \"refFarm\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\" \r\n    },\r\n    \"refIrrigationSystem\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationSystem:001\"  \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Drone:001\",  \r\n    \"type\": \"Drone\",\r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\", \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": {\r\n        \"type\": \"Text\",  \r\n        \"value\": \"Drone quadX01\"  \r\n    },  \r\n    \"status\": {\r\n        \"type\": \"Text\",  \r\n        \"value\": \"Armed\"  \r\n    },  \r\n    \"horVelocity\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"2.1\"  \r\n    },  \r\n    \"homeLocation\": {\r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Point\",  \r\n            \"coordinates\": [13.2 , 6.52]  \r\n        }  \r\n    },  \r\n    \"batteryCapacity\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.83\"  \r\n\r\n    },  \r\n    \"firmware\": {\r\n        \"type\": \"Text\",  \r\n        \"value\": \"version 0.0.1\"  \r\n    },  \r\n    \"manufacturer\": {\r\n        \"type\": \"Text\",  \r\n        \"value\": \"Drone flight X01\"  \r\n    },  \r\n    \"flightMission\": {\r\n        \"type\": \"Number\",  \r\n        \"value\": \"1\"  \r\n    },  \r\n    \"camera\": {\r\n        \"type\": \"String\",  \r\n        \"value\": \"Multispectral\"  \r\n    },  \r\n    \"refFarm\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"  \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Digital Entities",
+			"item": [
+				{
+					"name": "Weather Forecast",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"urn:ngsi-ld:WeatherForecast:001\",\n    \"type\": \"WeatherForecast\",\n    \"location\": {\n        \"type\": \"geo:json\",\n        \"value\": {\n            \"type\": \"Polygon\",\n            \"coordinates\": [\n                [\n                    [\n                        -46.73906922340393,\n                        -22.182015473535277\n                    ],\n                    [\n                        -46.74000799655914,\n                        -22.18274567838475\n                    ],\n                    [\n                        -46.73940181732178,\n                        -22.183942808737637\n                    ],\n                    [\n                        -46.7379480600357,\n                        -22.183932874087883\n                    ],\n                    [\n                        -46.73663377761841,\n                        -22.182770515217666\n                    ],\n                    [\n                        -46.737470626831055,\n                        -22.181916125643475\n                    ],\n                    [\n                        -46.73906922340393,\n                        -22.182015473535277\n                    ]\n                ]\n            ]\n        }\n    },\n    \"name\": {\n        \"type\": \"Text\",\n        \"value\": \"Weather Forecast GSMA\"\n    },\n    \"dateIssued\": {\n        \"type\": \"DateTime\",\n        \"value\": \"2016-12-01T08:00:00.00Z\"\n    },\n    \"validity\": {\n        \"type\": \"Text\",\n        \"value\": \"2016-12-01T18:00:00+01:00/2016-12-02T00:00:00+01:00\"\n    },\n    \"validityTo\": {\n        \"type\": \"DateTime\",\n        \"value\": \"2016-12-01T23:00:00.00Z\"\n    },\n    \"validityFrom\": {\n        \"type\": \"DateTime\",\n        \"value\": \"2016-12-01T17:00:00.00Z\"\n    },\n    \"weatherType\": {\n        \"type\": \"Text\",\n        \"value\": \"SunnyDay\"\n    },\n    \"dewPoint\": {\n        \"type\": \"Number\",\n        \"value\": \"22.4\"\n    },\n    \"visibility\": {\n        \"type\": \"Text\",\n        \"value\": \"VeryPoor\"\n    },\n    \"temperature\": {\n        \"type\": \"Number\",\n        \"value\": \"26.4\"\n    },\n    \"relativeHumidity \": {\n        \"type\": \"Number\",\n        \"value\": \"22.4\"\n    },\n    \"precipitationProbability\": {\n        \"type\": \"Number\",\n        \"value\": \"0.6\"\n    },\n    \"preciptation\": {\n        \"type\": \"Number\",\n        \"value\": \"80\"\n    },\n    \"windDirection\": {\n        \"type\": \"Number\",\n        \"value\": \"240\"\n    },\n    \"windSpeed\": {\n        \"type\": \"Number\",\n        \"value\": \"2.4\"\n    },\n    \"atmosphericPressure\": {\n        \"type\": \"Number\",\n        \"value\": \"300\"\n    },\n    \"solarRadiation\": {\n        \"type\": \"Number\",\n        \"value\": \"20\"\n    },\n    \"illuminance\": {\n        \"type\": \"Number\",\n        \"value\": \"1200\"\n    },\n    \"dayMinimum\": {\n        \"type\": \"StructuredValue\",\n        \"value\": {\n            \"feelsLikeTemperature\": 15,\n            \"temperature\": 15,\n            \"relativeHumidity\": 0.9\n        }\n    },\n    \"dayMaximum\": {\n        \"type\": \"Relationship\",\n        \"value\": {\n            \"feelsLikeTemperature\": 25,\n            \"temperature\": 30,\n            \"relativeHumidity\": 1\n        }\n    },\n    \"uVIndexMax\": {\n        \"type\": \"Number\",\n        \"value\": \"3.4\"\n    },\n    \"refFarm\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:Farm:001\"\n    },\n    \"refFarmer\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:Farmer:001\"\n    },\n    \"refWaterEstimate\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:WaterEstimate:001\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Need Estimation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterNeed:001\",  \r\n    \"type\": \"WaterNeed\",  \r\n    \"dateRetrieved\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"dateIssued\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"validTo\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"ValidFrom\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"source\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"SWAMP water estimate\"  \r\n    },  \r\n    \"dayMinimum\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"4.2\"  \r\n    },  \r\n    \"dayMaximum\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"4.2\"  \r\n    },  \r\n    \"refIrrigationRec\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationRec:001\"  \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Irrigation Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:IrrigationPlan:001\",  \r\n    \"type\": \"IrrigationPlan\",  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Irrigation plan for management zone 1\"  \r\n    },  \r\n    \"validFrom\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T22:00:00.00Z\"  \r\n    },  \r\n    \"validTo\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"refManagementZone\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"  \r\n    },\r\n    \"refFarm\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Irrigation Recommedation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:IrrigationRec:001\",  \r\n    \"type\": \"IrrigationRec\" ,\r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Irrigation recommendation for management zone 1\"  \r\n    },  \r\n    \"validFrom\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T22:00:00.00Z\"  \r\n    },  \r\n    \"validTo\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"waterVolume\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"200\"  \r\n    }, \r\n    \"refIrrigationPlan\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:IrrigationPlan:001\"  \r\n    },  \r\n    \"refFarm\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Spectral Cam",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:MultiSpectralCam:001\",  \r\n    \"type\": \"MultiSpectralCam\",  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Drone's multispectral camera\"  \r\n    },  \r\n    \"image\": {  \r\n        \"type\": \"URL\",  \r\n        \"value\": \"https://store.image.com\"  \r\n    },  \r\n    \"ndvi\": {  \r\n        \"type\": \"URL\",  \r\n        \"value\": \"https://store.image.com\"  \r\n    },  \r\n    \"lai\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"1.4\"  \r\n    },  \r\n    \"refManagementZone\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"  \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crop Type",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:CropType:001\",  \r\n    \"type\": \"CropType\",\r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"cotton\"  \r\n    },  \r\n    \"dateRetrieved\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"dateIssued\": {  \r\n        \"type\": \"DateTime\",  \r\n        \"value\": \"2016-12-01T23:00:00.00Z\"  \r\n    },  \r\n    \"totalWaterSeasonMin\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"300\"  \r\n    },  \r\n    \"totalWaterSeasonMax\": { \r\n    \t\"type\": \"Number\",  \r\n        \"value\": \"800\"  \r\n    },  \r\n    \"totalDays\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"120\"  \r\n    },  \r\n    \"cropGrowPeriods\": {  \r\n        \"type\": \"ImageObject\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"devInitialDays\": { \r\n        \"type\": \"Number\", \r\n        \"value\": \"30\"  \r\n    },  \r\n    \"devInitialDaysH2OMin\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"120\"  \r\n    },  \r\n    \"devInitialDaysH2OMax\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"160\"  \r\n    },  \r\n    \"devInitialRootDepth\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.3\"  \r\n    },  \r\n    \"devInitialKc\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.35\"  \r\n    },  \r\n    \"devInitialKy\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.2\"  \r\n    },  \r\n    \"devCropDevDays\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"50\"\r\n    },  \r\n    \"devCropDevH2OMin\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"130\"  \r\n    },  \r\n    \"devCropDevH2OMax\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"180\"  \r\n    },  \r\n    \"devCropRootDepth\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.6\"  \r\n    },  \r\n    \"devCropDevKc\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.5\"  \r\n    },  \r\n    \"devCropDevKy\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.5\"\r\n    },  \r\n    \"devMidSeaDays\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"60\"  \r\n    },  \r\n    \"devMidSeaH2OMin\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"devMidSeaH2OMax\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"devMidSeaRootDepth\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.6\"  \r\n    },  \r\n    \"devMidSeaKc\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"1.15\"  \r\n    },  \r\n    \"devMidSeaKy\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"-\"  \r\n    },  \r\n    \"devLateDays\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"55\"  \r\n    },  \r\n    \"devLateH2OMin\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"devLateH2OMax\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"\"  \r\n    },  \r\n    \"devLateRootDepth\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"1.4\"  \r\n    },  \r\n    \"devLateKc\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.6\"  \r\n    },  \r\n    \"devLateKy\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.25\"  \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Virtual Physical Entities",
+			"item": [
+				{
+					"name": "Farmer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Farmer:001\",  \r\n    \"type\": \"Farmer\",  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"John\"  \r\n    }\r\n} \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Farm",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Farm:001\",  \r\n    \"type\": \"Farm\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Polygon\",  \r\n            \"coordinates\": [  \r\n              [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Matopiba Pilot\"  \r\n    },  \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Field",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Field:001\",  \r\n    \"type\": \"Field\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Polygon\", \r\n            \"coordinates\": [  \r\n              [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }  \r\n      },  \r\n      \"name\": { \r\n           \"type\": \"Text\",  \r\n           \"value\": \"Matopiba Pilot\"    \r\n      }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Management Zone",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:ManagementZone:001\",  \r\n    \"type\": \"ManagementZone\",  \r\n    \"location\": {  \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Polygon\", \r\n            \"coordinates\": [  \r\n                [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Control Zone\"  \r\n    },  \r\n    \"refFarm\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    },  \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"  \r\n    },  \r\n    \"refField\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Field:001\"  \r\n    },  \r\n    \"refWaterEstimate\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterEstimate:001\"  \r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soil",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Soil:001\",  \r\n    \"type\": \"Soil\",  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Soil sample 1\"  \r\n    }, \r\n     \"source\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"SOTER Program\"  \r\n    }, \r\n    \"orgCarbon\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"totNitrogen\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilRetention\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilCatExcCap\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilCatExcCapClay\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilBaseSat\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilEffecCatExcCap\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilAluSat\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilCaCO3\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilGyp\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilExcSod\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilEleCondSatPas\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilBulDen\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilCoarseFrag\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilSandMass\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.1\"  \r\n    },  \r\n    \"soilSiltMass\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.3\"  \r\n    },  \r\n    \"soilClayMass\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"0.25\" \r\n    },  \r\n    \"refManagementZone\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"\r\n    }\r\n}  \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crop Instance",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:CropInstance:001\",  \r\n    \"type\": \"CropInstance\",  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Corn\"  \r\n    },  \r\n    \"totalWaterSeason\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"140.3\"  \r\n    },  \r\n    \"totalCropDays\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"140\"\r\n    },  \r\n    \"devDays\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"25\"  \r\n    },  \r\n    \"H2ORequiredMin\": {  \r\n        \"type\": \"Number\",  \r\n        \"value\": \"3\"  \r\n    },  \r\n    \"H2ORequiredMax\": { \r\n        \"type\": \"Number\",  \r\n        \"value\": \"40\"  \r\n    },  \r\n    \"refFarm\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Management:001\"   \r\n    }, \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Management:001\"   \r\n    },    \r\n    \"refManagementZone\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Management:001\"   \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Distribuition System",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterDistributionNetwork:001\",  \r\n    \"type\": \"WaterDistribuitionNetwork\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Polygon\",  \r\n            \"coordinates\": [  \r\n                [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }  \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Center pivot system\"  \r\n    },    \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    }, \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"  \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Irrigation System",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:IrrigationSystem:001\",  \r\n    \"type\": \"IrrigationSystem\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n            \"type\": \"Polygon\", \r\n            \"coordinates\": [  \r\n                [  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ],  \r\n                    [  \r\n                      -46.74000799655914,  \r\n                      -22.18274567838475  \r\n                    ],  \r\n                    [  \r\n                      -46.73940181732178,  \r\n                      -22.183942808737637  \r\n                    ],  \r\n                    [  \r\n                      -46.7379480600357,  \r\n                      -22.183932874087883  \r\n                    ],  \r\n                    [  \r\n                      -46.73663377761841,  \r\n                      -22.182770515217666  \r\n                    ],  \r\n                    [  \r\n                      -46.737470626831055,  \r\n                      -22.181916125643475  \r\n                    ],  \r\n                    [  \r\n                      -46.73906922340393,  \r\n                      -22.182015473535277  \r\n                    ]  \r\n                ]  \r\n            ]  \r\n        }\r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Center pivot system\"  \r\n    },  \r\n    \"refManagementZone\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"  \r\n    },  \r\n    \"irrigationType\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Central pivot\"\r\n    },  \r\n    \"refFarm\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:ManagementZone:001\"   \r\n    },   \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Node",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterNode:001\",  \r\n    \"type\": \"WaterNode\",  \r\n    \"location\": { \r\n        \"type\": \"geo:json\",  \r\n        \"value\": {  \r\n             \"type\": \"Point\", \r\n             \"coordinates\": [13.3986, 52.5547]  \r\n        }  \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Node 1\"  \r\n    },  \r\n    \"in\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Gate:001\"  \r\n    },  \r\n    \"out\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Pipe:001\" \r\n    },  \r\n    \"refWaterDistribuitionNetwork\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:waterDistributionNetwork:001\"  \r\n    },\r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"   \r\n    },   \r\n    \"refFarmer\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"urn:ngsi-ld:Gate:001\",\n    \"type\": \"Gate\",\n    \"location\": {\n        \"type\": \"geo:json\",\n        \"value\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                13.3986,\n                52.5547\n            ]\n        }\n    },\n    \"name\": {\n        \"type\": \"Text\",\n        \"value\": \"Main Gate\"\n    },\n    \"position\": {\n        \"type\": \"Number\",\n        \"value\": \"1\"\n    },\n    \"in\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:Pipe:001\"\n    },\n    \"out\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:negsi-ld:Pipe:004\"\n    },\n    \"refWaterDistributionNetwork\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:waterDistributionNetwork:001\"\n    },\n    \"refFarm\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:Farm:001\"\n    },\n    \"refFarmer\": {\n        \"type\": \"Relationship\",\n        \"value\": \"urn:ngsi-ld:Farmer:001\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Water Connection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:WaterConnection:001\",  \r\n    \"type\": \"WaterConnection\",\r\n    \"location\": { \r\n    \"type\": \"geo:json\",  \r\n    \"value\": {  \r\n        \"type\": \"Point\",\r\n        \"coordinates\": [13.3986, 52.5547]  \r\n        } \r\n    },  \r\n    \"name\": {  \r\n        \"type\": \"Text\",  \r\n        \"value\": \"First water connection\"  \r\n    },  \r\n    \"start\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:001\"   \r\n    },  \r\n    \"end\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:002\"  \r\n    },  \r\n    \"refWaterDistributionNetwork\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:wateDistributionNetwork:001\"\r\n    },  \r\n    \"refFarm\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"   \r\n    },   \r\n    \"refFarmer\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n   \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pipe",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Pipe:001\",  \r\n    \"type\": \"Pipe\",\r\n    \"location\": { \r\n    \"type\": \"geo:json\",  \r\n    \"value\": {  \r\n        \"type\": \"Point\", \r\n        \"coordinates\": [13.3986, 52.5547]  \r\n        } \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"main pipe\"  \r\n    },  \r\n    \"start\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:001\"   \r\n    },  \r\n    \"end\": {  \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:002\"  \r\n    },  \r\n    \"refWaterDistributionNetwork\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterDistributionNetwork:001\"\r\n    },  \r\n    \"refFarm\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"   \r\n    },   \r\n    \"refFarmer\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Channel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"id\": \"urn:ngsi-ld:Channel:001\",  \r\n    \"type\": \"Channel\",\r\n    \"location\": {  \r\n    \"type\": \"geo:json\",  \r\n    \"value\": {  \r\n        \"type\": \"Point\", \r\n        \"coordinates\": [13.3986, 52.5547]  \r\n        } \r\n    },  \r\n    \"name\": { \r\n        \"type\": \"Text\",  \r\n        \"value\": \"Entrance channel\"  \r\n    },  \r\n    \"start\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:001\"   \r\n    },  \r\n    \"end\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterNode:002\"  \r\n    },  \r\n    \"refWaterDistribuitionNetwork\": { \r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:WaterDistribuitionNetwork:001\"\r\n    },  \r\n    \"refFarm\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farm:001\"   \r\n    },   \r\n    \"refFarmer\": {\r\n        \"type\": \"Relationship\",  \r\n        \"value\": \"urn:ngsi-ld:Farmer:001\"   \r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
